@@ -1,0 +1,24 @@
+// P0.7  -  GPIO,  Push-Pull, Digital           输出1S方波
+// P0.4  -  TX0 (UART0), Open-Drain, Digital
+// P0.5  -  RX0 (UART0), Open-Drain, Digital
+
+CPU:	C8051F300
+
+UART: 	N-8-1 115200 
+
+$GTF:#  			获取当前频率
+$STF:0868000000# 		设置当前频率	
+
+
+频率参数：
+
+默认频率：			1000GHz	(P0_7 = HIGH) 		2000GHz	(P0_7 = LOW)
+
+范围：00140000000	~	4400000000 Hz
+
+Start Freq	Stop Freq	VCO Divider	Channel Spacing 
+140MHz	 	275MHz		16		62.5kHz 
+275MHz	 	550MHz		8	 	125kHz 
+550MHz		1.10GHz		4	 	250kHz 
+1.10GHz		2.20GHz		2		500kHz 
+2.20GHz		4.40GHz		1		1.00MHz 
